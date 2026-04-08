@@ -3,6 +3,7 @@ const categoryService = require ('../service/categoryService.js')
 module.exports.createCategory = async (req,res) => {
     try {
         const responseFromService = await categoryService.createCategory(req)
+        console.log('ulan')
         return res.status(200).send(responseFromService);
     } catch (error) {
         return res.status(400).send(error.message)
